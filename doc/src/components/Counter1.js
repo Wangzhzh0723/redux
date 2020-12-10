@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "../react-redux";
-import actions from "../store/actions/counter2";
+import actions from "../store/actions/counter1";
 
 class Counter extends React.Component {
   render() {
@@ -22,7 +22,7 @@ class Counter extends React.Component {
 
 // 把仓库中的状态映射为组件的属性对象
 function mapStateToProps(state) {
-  return state.counter2; // 当成组件的属性
+  return state.counter1; // 当成组件的属性
 }
 
 // 第二个参数不写, 会向组件的属性传递dispatch, 否则会将第二个参数合并到props并和dispatch绑定

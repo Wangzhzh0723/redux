@@ -10,6 +10,22 @@ const actions = {
     return {
       type: MINUS1
     };
+  },
+  promiseAdd() {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve({
+          type: ADD1
+        });
+      }, 1000);
+    });
+  },
+  thunkMinus() {
+    return () => {
+      return {
+        type: MINUS1
+      };
+    };
   }
 };
 export default actions;
